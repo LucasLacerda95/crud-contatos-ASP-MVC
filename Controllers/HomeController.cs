@@ -1,8 +1,11 @@
-﻿ using ControleDeContatos.Models;
+﻿using ControleDeContatos.Filters;
+using ControleDeContatos.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace ControleDeContatos.Controllers {
+
+    [PaginaParaUsuarioLogado]//Filtro, acessa a controler apenas com sessao logada
     public class HomeController : Controller {
        
 

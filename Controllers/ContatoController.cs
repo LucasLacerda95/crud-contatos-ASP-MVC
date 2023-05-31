@@ -1,8 +1,11 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeContatos.Filters;
+using ControleDeContatos.Models;
 using ControleDeContatos.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleDeContatos.Controllers {
+
+    [PaginaParaUsuarioLogado]//Filtro, acessa a controler apenas com sessao logada
     public class ContatoController : Controller {
 
         private readonly IContatoRepository _contatoRepository;
